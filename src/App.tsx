@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import { Container, Box, Typography, Button, Grid, Divider } from "@mui/material";
+import { Container, Box, Typography, Button, Divider } from "@mui/material";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { projects, skills, experiences, education } from "./data/data";
 import ProjectCard from "./components/ProjectCard";
@@ -50,7 +50,7 @@ const App: React.FC = () => {
                     <Button
                         variant="contained"
                         color="secondary"
-                        href="mailto:noah.guerin.dev@gmail.com"
+                        href="mailto:noahguerin3@outlook.com"
                         startIcon={<FaEnvelope />}
                         aria-label="Email Noah"
                     >
@@ -92,46 +92,70 @@ const App: React.FC = () => {
             <Container sx={{ py: { xs: 4, md: 6 } }}>
                 {/* Projects Section */}
                 <Section title="Projects">
-                    <Grid container spacing={4}>
+                    <Box
+                        sx={{
+                            display: "grid",
+                            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" },
+                            gap: 4,
+                        }}
+                    >
                         {projects.map((project) => (
-                            <Grid item xs={12} md={6} lg={4} key={project.title}>
+                            <Box key={project.title}>
                                 <ProjectCard project={project} />
-                            </Grid>
+                            </Box>
                         ))}
-                    </Grid>
+                    </Box>
                 </Section>
 
                 {/* Skills Section */}
                 <Section title="Skills">
-                    <Grid container spacing={3}>
+                    <Box
+                        sx={{
+                            display: "grid",
+                            gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" },
+                            gap: 3,
+                        }}
+                    >
                         {skills.map((group) => (
-                            <Grid item xs={12} sm={6} md={4} key={group.category}>
+                            <Box key={group.category}>
                                 <SkillsCard group={group} />
-                            </Grid>
+                            </Box>
                         ))}
-                    </Grid>
+                    </Box>
                 </Section>
 
                 {/* Experience Section */}
                 <Section title="Experience">
-                    <Grid container spacing={4}>
+                    <Box
+                        sx={{
+                            display: "grid",
+                            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" },
+                            gap: 4,
+                        }}
+                    >
                         {experiences.map((exp) => (
-                            <Grid item xs={12} md={6} lg={4} key={exp.company + exp.role}>
+                            <Box key={exp.company + exp.role}>
                                 <ExperienceCard experience={exp} />
-                            </Grid>
+                            </Box>
                         ))}
-                    </Grid>
+                    </Box>
                 </Section>
 
                 {/* Education Section */}
                 <Section title="Education">
-                    <Grid container spacing={4}>
+                    <Box
+                        sx={{
+                            display: "grid",
+                            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" },
+                            gap: 4,
+                        }}
+                    >
                         {education.map((edu) => (
-                            <Grid item xs={12} md={6} lg={4} key={edu.institution}>
+                            <Box key={edu.institution}>
                                 <EducationCard education={edu} />
-                            </Grid>
+                            </Box>
                         ))}
-                    </Grid>
+                    </Box>
                 </Section>
             </Container>
         </Box>

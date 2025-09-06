@@ -25,7 +25,7 @@ export const projects = [
         title: "Job Tracker App",
         description: "A full-stack app to track job applications built with .NET and React.",
         techStack: [".NET", "React", "Azure"],
-        link: "https://google.com",
+        link: "https://mango-flower-04c2b6503.1.azurestaticapps.net",
         github: "https://github.com/noahg9/job-tracker-backend",
         image: "/images/jobtracker.jpg",
     },
