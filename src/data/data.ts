@@ -7,7 +7,7 @@ export const experiences = [
         company: "we+",
         period: "Mar 2025 - Jun 2025",
         description: "Built and deployed an AI chatbot from scratch using Java, Spring Boot, Angular and AWS.",
-        logo: "/images/we+.png",
+        logo: "/public/we+.png",
     },
 ];
 
@@ -16,7 +16,7 @@ export const education = [
         degree: "Bachelor's Degree in Applied Computer Science",
         institution: "Karel de Grote Hogeschool",
         period: "2021 - 2025",
-        logo: "/images/kdg.png",
+        logo: "/public/kdg.png",
     },
 ];
 
@@ -27,7 +27,7 @@ export const projects = [
         techStack: [".NET", "React", "Azure"],
         link: "https://mango-flower-04c2b6503.1.azurestaticapps.net",
         github: "https://github.com/noahg9/job-tracker-backend",
-        image: "/images/jobtracker.jpg",
+        image: "/public/jobtracker.jpg",
     },
 ];
 
