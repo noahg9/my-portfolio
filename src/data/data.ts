@@ -23,7 +23,7 @@ export const education = [
 export const projects = [
     {
         title: "Job Application Tracker",
-        description: "A full-stack app to track job applications built with .NET and React.",
+        description: "A web app built with .NET and React to track and manage job applications.",
         techStack: [".NET", "React", "Azure"],
         link: "https://mango-flower-04c2b6503.1.azurestaticapps.net",
         github: "https://github.com/noahg9/job-tracker-backend",
