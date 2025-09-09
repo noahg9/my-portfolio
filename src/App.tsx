@@ -42,7 +42,7 @@ const App: React.FC = () => {
                     Noah Guerin
                 </Typography>
                 <Typography variant="h5" gutterBottom>
-                    Junior Software Developer
+                    Software Developer
                 </Typography>
 
                 {/* Contact Buttons */}
