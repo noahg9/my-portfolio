@@ -22,6 +22,16 @@ export const education = [
 
 export const projects = [
     {
+        title: "Multi-User Game Platform",
+        description: "A real-time multiplayer board game platform with player stats, matchmaking, and achievements.",
+        techStack: ["Java", "React", "Python"],
+        image: "/gameplatform.jpg",
+        videos: [
+            "https://www.youtube.com/embed/eNvGBNqvowo",
+            "https://www.youtube.com/embed/27msJlZxx24"
+        ],
+    },
+    {
         title: "Job Application Tracker",
         description: "A web app built with .NET and React to track and manage job applications.",
         techStack: [".NET", "React", "Azure"],
