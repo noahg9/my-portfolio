@@ -22,11 +22,12 @@ export const education = [
 
 export const projects = [
     {
-        title: "Focus-Measuring Headwear",
-        description: "Web interface to visualize and analyze brainwave data to help users track focus and productivity",
-        techStack: ["Java", "C++"],
-        image: "/headwear-thumbnail.png",
-        images: ["/headwear1.png", "/headwear2.png", "/headwear3.png", "/headwear4.png", "/headwear5.png"],
+        title: "Job Application Tracker",
+        description: "Web app built with .NET and React to track and manage job applications.",
+        techStack: [".NET", "React", "Azure"],
+        link: "https://mango-flower-04c2b6503.1.azurestaticapps.net",
+        github: "https://github.com/noahg9/job-tracker-backend",
+        image: "/jobtracker.jpg",
     },
     {
         title: "Multi-User Game Platform",
@@ -39,13 +40,12 @@ export const projects = [
         ],
     },
     {
-        title: "Job Application Tracker",
-        description: "Web app built with .NET and React to track and manage job applications.",
-        techStack: [".NET", "React", "Azure"],
-        link: "https://mango-flower-04c2b6503.1.azurestaticapps.net",
-        github: "https://github.com/noahg9/job-tracker-backend",
-        image: "/jobtracker.jpg",
-    },
+        title: "Focus-Measuring Headwear",
+        description: "Web interface to visualize and analyze brainwave data to help users track focus and productivity",
+        techStack: ["Java", "C++"],
+        image: "/headwear-thumbnail.png",
+        images: ["/headwear1.png", "/headwear2.png", "/headwear3.png", "/headwear4.png", "/headwear5.png"],
+    }
 ];
 
 export const skills = [
