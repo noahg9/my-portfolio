@@ -30,6 +30,16 @@ export const projects = [
         image: "/jobtracker.jpg",
     },
     {
+        title: "Agentic RAG for Chemical Industries",
+        description: "Agentic RAG system using vector search and multi-step QA from company-specific documents.",
+        techStack: ["Python"],
+        github: "https://github.com/noahg9/agentic-rag-chemical",
+        image: "/agenticrag.jpg",
+        videos: [
+            "https://www.youtube.com/embed/jfHgNNU7lv0"
+        ],
+    },
+    {
         title: "Multi-User Game Platform",
         description: "Real-time multiplayer board game platform with player stats, matchmaking, and achievements.",
         techStack: ["Java", "React", "Python"],
@@ -40,11 +50,11 @@ export const projects = [
         ],
     },
     {
-        title: "Focus-Measuring Headwear",
+        title: "Bridea",
         description: "Web interface to visualize and analyze brainwave data to help users track focus and productivity",
         techStack: ["Java", "C++"],
-        image: "/headwear-thumbnail.png",
-        images: ["/headwear1.png", "/headwear2.png", "/headwear3.png", "/headwear4.png", "/headwear5.png"],
+        github: "https://github.com/noahg9/bridea",
+        image: "/bridea-thumbnail.png",
     }
 ];
 
