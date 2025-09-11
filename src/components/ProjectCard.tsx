@@ -1,6 +1,6 @@
 ﻿import { useState } from "react";
 import { Card, CardContent, CardActions, Typography, Chip, Button, Box, Stack, Dialog, DialogTitle, DialogContent } from "@mui/material";
-import { FaExternalLinkAlt, FaGithub, FaPlay } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaPlay, FaImages } from "react-icons/fa";
 
 interface Project {
     title: string;
@@ -10,12 +10,12 @@ interface Project {
     github?: string;
     image?: string;
     videos?: string[];
+    images?: string[];
 }
 
 const ProjectCard = ({ project }: { project: Project }) => {
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const [openVideos, setOpenVideos] = useState(false);
+    const [openImages, setOpenImages] = useState(false);
 
     return (
         <>
@@ -41,7 +41,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        // Remove clickable cursor from image
                     }}
                 >
                     {project.image ? (
@@ -121,7 +120,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     {project.videos && (
                         <Button
                             size="small"
-                            onClick={handleOpen}
+                            onClick={() => setOpenVideos(true)}
                             startIcon={<FaPlay />}
                             sx={{ textTransform: "none" }}
                             aria-label={`${project.title} Demo`}
@@ -129,41 +128,64 @@ const ProjectCard = ({ project }: { project: Project }) => {
                             Demo
                         </Button>
                     )}
+                    {project.images && (
+                        <Button
+                            size="small"
+                            onClick={() => setOpenImages(true)}
+                            startIcon={<FaImages />}
+                            sx={{ textTransform: "none" }}
+                            aria-label={`${project.title} Images`}
+                        >
+                            Images
+                        </Button>
+                    )}
                 </CardActions>
             </Card>
 
             {/* Modal Dialog for Videos */}
             {project.videos && (
-                <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
+                <Dialog open={openVideos} onClose={() => setOpenVideos(false)} maxWidth="md" fullWidth>
                     <DialogTitle>{project.title} Demo</DialogTitle>
                     <DialogContent dividers>
-                        <Typography variant="body1" gutterBottom>
-                            {project.description}
-                        </Typography>
-                        <Typography variant="subtitle2" gutterBottom>
-                            Tech Stack: {project.techStack.join(", ")}
-                        </Typography>
+                        {project.videos.map((url, idx) => (
+                            <Box key={idx} sx={{ position: "relative", paddingTop: "56.25%", mb: 2 }}>
+                                <iframe
+                                    src={url}
+                                    title={`${project.title} Video ${idx + 1}`}
+                                    style={{
+                                        position: "absolute",
+                                        top: 0,
+                                        left: 0,
+                                        width: "100%",
+                                        height: "100%",
+                                        border: 0,
+                                    }}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            </Box>
+                        ))}
+                    </DialogContent>
+                </Dialog>
+            )}
 
-                        <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 2 }}>
-                            {project.videos.map((url, idx) => (
-                                <Box key={idx} sx={{ position: "relative", paddingTop: "56.25%" }}>
-                                    <iframe
-                                        src={url}
-                                        title={`${project.title} Video ${idx + 1}`}
-                                        style={{
-                                            position: "absolute",
-                                            top: 0,
-                                            left: 0,
-                                            width: "100%",
-                                            height: "100%",
-                                            border: 0,
-                                        }}
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
+            {/* Modal Dialog for Images */}
+            {project.images && (
+                <Dialog open={openImages} onClose={() => setOpenImages(false)} maxWidth="md" fullWidth>
+                    <DialogTitle>{project.title} Images</DialogTitle>
+                    <DialogContent dividers>
+                        <Stack direction="column" spacing={2}>
+                            {project.images.map((src, idx) => (
+                                <Box key={idx} sx={{ width: "100%", textAlign: "center" }}>
+                                    <Box
+                                        component="img"
+                                        src={src}
+                                        alt={`${project.title} image ${idx + 1}`}
+                                        sx={{ maxWidth: "100%", borderRadius: 1, boxShadow: 3 }}
                                     />
                                 </Box>
                             ))}
-                        </Box>
+                        </Stack>
                     </DialogContent>
                 </Dialog>
             )}
