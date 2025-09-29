@@ -1,7 +1,13 @@
-import { FaJava, FaReact, FaMicrosoft } from "react-icons/fa";
-import { SiDotnet, SiAngular } from "react-icons/si";
+import { FaJava, FaReact, FaMicrosoft, FaPython } from "react-icons/fa";
 
-export const experiences = [
+export const professionalJourney = [
+    {
+        role: "Software Developer",
+        company: "saply.ai",
+        period: "Sep 2025 - Present",
+        description: "Developing Java-based AI tools to convert CVs into client-ready presentations.",
+        logo: "/saply-ai.avif",
+    },
     {
         role: "Software Developer Intern",
         company: "we+",
@@ -9,13 +15,11 @@ export const experiences = [
         description: "Built and deployed an AI chatbot from scratch using Java, Spring Boot, Angular and AWS.",
         logo: "/we+.png",
     },
-];
-
-export const education = [
     {
         degree: "Bachelor's Degree in Applied Computer Science",
         institution: "Karel de Grote Hogeschool",
         period: "2021 - 2025",
+        description: "Specialized in artificial intelligence.",
         logo: "/kdg.png",
     },
 ];
@@ -60,17 +64,16 @@ export const projects = [
 
 export const skills = [
     {
-        category: "Backend",
+        category: "Backend / AI",
         skills: [
-            { name: "Java", icon: FaJava },
-            { name: ".NET", icon: SiDotnet },
+            { name: "Java / Spring Boot", icon: FaJava },
+            { name: "Python", icon: FaPython },
         ],
     },
     {
         category: "Frontend",
         skills: [
             { name: "React", icon: FaReact },
-            { name: "Angular", icon: SiAngular },
         ],
     },
     {

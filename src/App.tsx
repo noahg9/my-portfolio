@@ -1,25 +1,28 @@
 ﻿import React from "react";
 import { Container, Box, Typography, Button, Divider } from "@mui/material";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
-import { projects, skills, experiences, education } from "./data/data";
+import { projects, skills, professionalJourney } from "./data/data";
 import ProjectCard from "./components/ProjectCard";
 import SkillsCard from "./components/SkillsCard";
-import ExperienceCard from "./components/ExperienceCard";
-import EducationCard from "./components/EducationCard";
+import ProfessionalJourneyCard from "./components/ProfessionalJourneyCard";
 
-// Reusable Section component
 interface SectionProps {
     title: string;
     children: React.ReactNode;
 }
 
 const Section: React.FC<SectionProps> = ({ title, children }) => (
-    <Box sx={{ mb: 6 }}>
-        <Typography variant="h3" align="center" gutterBottom>
+    <Box sx={{ mb: 8 }}>
+        <Typography
+            variant="h3"
+            align="center"
+            gutterBottom
+            sx={{ fontWeight: 700 }}
+        >
             {title}
         </Typography>
         {children}
-        <Divider sx={{ my: 4 }} />
+        <Divider sx={{ my: 5 }} />
     </Box>
 );
 
@@ -45,62 +48,57 @@ const App: React.FC = () => {
                     Software Developer
                 </Typography>
 
-                {/* Contact Buttons */}
                 <Box sx={{ mt: 4, display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }}>
                     <Button
                         variant="contained"
                         color="secondary"
                         href="mailto:noahguerin3@outlook.com"
                         startIcon={<FaEnvelope />}
-                        aria-label="Email Noah"
                     >
                         Email
                     </Button>
-
                     <Button
                         variant="outlined"
                         color="inherit"
                         href="https://github.com/noahg9"
                         target="_blank"
                         startIcon={<FaGithub />}
-                        aria-label="Visit Noah's GitHub"
                     >
                         GitHub
                     </Button>
-
                     <Button
                         variant="outlined"
                         color="inherit"
                         href="https://www.linkedin.com/in/noahguerin"
                         target="_blank"
                         startIcon={<FaLinkedin />}
-                        aria-label="Visit Noah's LinkedIn"
                     >
                         LinkedIn
                     </Button>
                 </Box>
-
-                {/* Scroll Hint */}
-                <Box sx={{ position: "absolute", bottom: 16, left: "50%", transform: "translateX(-50%)" }}>
-                    <Typography variant="subtitle2" sx={{ animation: "bounce 1.5s infinite" }}>
-                        ↓ Scroll Down
-                    </Typography>
-                </Box>
             </Box>
 
-            {/* Main Sections */}
-            <Container sx={{ py: { xs: 4, md: 6 } }}>
+            <Container sx={{ py: { xs: 6, md: 10 } }}>
                 {/* Projects Section */}
                 <Section title="Projects">
                     <Box
                         sx={{
-                            display: "grid",
-                            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" },
-                            gap: 4,
+                            display: "flex",
+                            overflowX: "auto",
+                            gap: 3,
+                            py: 1,
+                            "&::-webkit-scrollbar": { height: 8 },
+                            "&::-webkit-scrollbar-thumb": { backgroundColor: "rgba(0,0,0,0.3)", borderRadius: 4 },
                         }}
                     >
                         {projects.map((project) => (
-                            <Box key={project.title}>
+                            <Box
+                                key={project.title}
+                                sx={{
+                                    flex: "0 0 calc(33.333% - 16px)",
+                                    minWidth: 250,
+                                }}
+                            >
                                 <ProjectCard project={project} />
                             </Box>
                         ))}
@@ -112,49 +110,26 @@ const App: React.FC = () => {
                     <Box
                         sx={{
                             display: "grid",
-                            gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" },
+                            gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "repeat(3, 1fr)" },
                             gap: 3,
                         }}
                     >
                         {skills.map((group) => (
-                            <Box key={group.category}>
-                                <SkillsCard group={group} />
-                            </Box>
+                            <SkillsCard key={group.category} group={group} />
                         ))}
                     </Box>
                 </Section>
 
-                {/* Experience Section */}
-                <Section title="Experience">
+                {/* Professional Journey Section */}
+                <Section title="Professional Journey">
                     <Box
                         sx={{
-                            display: "grid",
-                            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" },
-                            gap: 4,
+                            display: "flex",
+                            flexDirection: { xs: "column", md: "row" },
+                            gap: 6,
                         }}
                     >
-                        {experiences.map((exp) => (
-                            <Box key={exp.company + exp.role}>
-                                <ExperienceCard experience={exp} />
-                            </Box>
-                        ))}
-                    </Box>
-                </Section>
-
-                {/* Education Section */}
-                <Section title="Education">
-                    <Box
-                        sx={{
-                            display: "grid",
-                            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" },
-                            gap: 4,
-                        }}
-                    >
-                        {education.map((edu) => (
-                            <Box key={edu.institution}>
-                                <EducationCard education={edu} />
-                            </Box>
-                        ))}
+                        <ProfessionalJourneyCard items={professionalJourney} />
                     </Box>
                 </Section>
             </Container>

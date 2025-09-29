@@ -31,7 +31,6 @@ const SkillsCard = ({ group }: SkillsCardProps) => {
             }}
         >
             <CardContent sx={{ flexGrow: 1 }}>
-                {/* Category as bold header */}
                 <Typography
                     variant="h6"
                     gutterBottom
