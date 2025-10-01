@@ -66,7 +66,7 @@ export const skills = [
     {
         category: "Backend / AI",
         skills: [
-            { name: "Java / Spring Boot", icon: FaJava },
+            { name: "Java", icon: FaJava },
             { name: "Python", icon: FaPython },
         ],
     },

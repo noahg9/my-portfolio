@@ -106,7 +106,7 @@ const App: React.FC = () => {
                 </Section>
 
                 {/* Skills Section */}
-                <Section title="Skills">
+                <Section title="Core Skills">
                     <Box
                         sx={{
                             display: "grid",
