@@ -65,7 +65,7 @@ export const professionalJourney = [
         role: "Software Engineer",
         company: "saply.ai",
         period: "Sep 2025 - Present",
-        description: "Building Java-based AI tool for automating CV formatting and client-ready outputs.",
+        description: "Developing a Java-based AI tool for automating CV formatting and client-ready outputs.",
         logo: "/saply-ai.avif",
     },
     {
