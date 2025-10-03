@@ -69,7 +69,7 @@ const App: React.FC = () => {
                     <Button
                         variant="outlined"
                         color="inherit"
-                        href="https://www.linkedin.com/in/noahguerin"
+                        href="https://www.linkedin.com/in/noahguerin/"
                         target="_blank"
                         startIcon={<FaLinkedin />}
                     >

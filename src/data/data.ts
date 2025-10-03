@@ -1,29 +1,5 @@
 import { FaJava, FaReact, FaMicrosoft, FaPython } from "react-icons/fa";
 
-export const professionalJourney = [
-    {
-        role: "Software Developer",
-        company: "saply.ai",
-        period: "Sep 2025 - Present",
-        description: "Developing Java-based AI tools to convert CVs into client-ready presentations.",
-        logo: "/saply-ai.avif",
-    },
-    {
-        role: "Software Developer Intern",
-        company: "we+",
-        period: "Mar 2025 - Jun 2025",
-        description: "Built and deployed an AI chatbot from scratch using Java, Spring Boot, Angular and AWS.",
-        logo: "/we+.png",
-    },
-    {
-        degree: "Bachelor's Degree in Applied Computer Science",
-        institution: "Karel de Grote Hogeschool",
-        period: "2021 - 2025",
-        description: "Specialized in artificial intelligence.",
-        logo: "/kdg.png",
-    },
-];
-
 export const projects = [
     {
         title: "Job Application Tracker",
@@ -81,5 +57,29 @@ export const skills = [
         skills: [
             { name: "Azure", icon: FaMicrosoft },
         ],
+    },
+];
+
+export const professionalJourney = [
+    {
+        role: "Software Engineer",
+        company: "saply.ai",
+        period: "Sep 2025 - Present",
+        description: "Building Java-based AI tool for automating CV formatting and client-ready outputs.",
+        logo: "/saply-ai.avif",
+    },
+    {
+        role: "Software Engineer Intern",
+        company: "we+",
+        period: "Mar 2025 - Jun 2025",
+        description: "Built and deployed an AI chatbot using Java, Spring Boot, Angular and AWS.",
+        logo: "/we+.png",
+    },
+    {
+        degree: "Bachelor's Degree in Applied Computer Science",
+        institution: "Karel de Grote Hogeschool",
+        period: "2021 - 2025",
+        description: "Specialization in Artificial Intelligence.",
+        logo: "/kdg.png",
     },
 ];
