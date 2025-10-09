@@ -45,7 +45,7 @@ const App: React.FC = () => {
                     Noah Guerin
                 </Typography>
                 <Typography variant="h5" gutterBottom>
-                    Software Developer
+                    Software Engineer
                 </Typography>
 
                 <Box sx={{ mt: 4, display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }}>
