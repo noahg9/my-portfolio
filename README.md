@@ -6,4 +6,4 @@ https://noahguerin.me/
 
 ## Screenshot
 
-![Screenshot](./images/myportfolio.jpg)
+![Screenshot](./images/myportfolio.png)
