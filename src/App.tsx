@@ -1,6 +1,6 @@
 ﻿import React from "react";
-import { Container, Box, Typography, Button, Divider } from "@mui/material";
-import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { Container, Box, Typography, Button, Divider, Stack, Chip } from "@mui/material";
+import { FaGithub, FaEnvelope, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
 import { projects, skills, professionalJourney } from "./data/data";
 import ProjectCard from "./components/ProjectCard";
 import SkillsCard from "./components/SkillsCard";
@@ -47,6 +47,9 @@ const App: React.FC = () => {
                 <Typography variant="h5" gutterBottom>
                     Software Engineer
                 </Typography>
+                <Stack direction="row" justifyContent="center" sx={{ mt: 1 }}>
+                    <Chip icon={<FaMapMarkerAlt />} label="Antwerp, Belgium" size="small" color="secondary" />
+                </Stack>
 
                 <Box sx={{ mt: 4, display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }}>
                     <Button
