@@ -73,7 +73,7 @@ export const professionalJourney = [
         company: "we+",
         period: "Mar 2025 - Jun 2025",
         description: "Developed an HR chatbot using Java, Angular, and Azure OpenAI, deployed on AWS.",
-        logo: "/we+.png",
+        logo: "/we-plus.png",
     },
     {
         degree: "Bachelor's Degree in Applied Computer Science",
