@@ -48,20 +48,29 @@ const App: React.FC = () => {
                     Software Engineer
                 </Typography>
                 <Stack direction="row" justifyContent="center" sx={{ mt: 1 }}>
-                    <Chip icon={<FaMapMarkerAlt />} label="Antwerp, Belgium" size="small" color="secondary" />
+                    <Chip
+                        icon={<FaMapMarkerAlt />}
+                        label="Antwerp, Belgium"
+                        size="small"
+                        sx={{
+                            bgcolor: "transparent",
+                            color: "white",
+                            "& .MuiChip-icon": { color: "inherit" },
+                        }}
+                    />
                 </Stack>
 
                 <Box sx={{ mt: 4, display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }}>
                     <Button
-                        variant="contained"
-                        color="secondary"
+                        variant="text"
+                        color="inherit"
                         href="mailto:noahguerin3@outlook.com"
                         startIcon={<FaEnvelope />}
                     >
                         Email
                     </Button>
                     <Button
-                        variant="outlined"
+                        variant="text"
                         color="inherit"
                         href="https://github.com/noahg9"
                         target="_blank"
@@ -70,7 +79,7 @@ const App: React.FC = () => {
                         GitHub
                     </Button>
                     <Button
-                        variant="outlined"
+                        variant="text"
                         color="inherit"
                         href="https://www.linkedin.com/in/noahguerin/"
                         target="_blank"
