@@ -5,16 +5,16 @@ export const projects = [
         title: "Job Application Tracker",
         description: "Web app built with .NET and React to track and manage job applications.",
         techStack: [".NET", "React", "Azure"],
-        link: "https://mango-flower-04c2b6503.1.azurestaticapps.net",
+        //link: "https://mango-flower-04c2b6503.1.azurestaticapps.net",
         github: "https://github.com/noahg9/job-tracker-backend",
-        image: "/jobtracker.jpg",
+        image: "/job-tracker.jpg",
     },
     {
         title: "Agentic RAG for Chemical Industries",
         description: "Agentic RAG system using vector search and multi-step QA from company-specific documents.",
         techStack: ["Python"],
         github: "https://github.com/noahg9/agentic-rag-chemical",
-        image: "/agenticrag.jpg",
+        image: "/agentic-rag.jpg",
         videos: [
             "https://www.youtube.com/embed/jfHgNNU7lv0"
         ],
@@ -23,7 +23,7 @@ export const projects = [
         title: "Multi-User Game Platform",
         description: "Real-time multiplayer board game platform with player stats, matchmaking, and achievements.",
         techStack: ["Java", "React", "Python"],
-        image: "/gameplatform.jpg",
+        image: "/game-platform.jpg",
         videos: [
             "https://www.youtube.com/embed/eNvGBNqvowo",
             "https://www.youtube.com/embed/27msJlZxx24"
