@@ -72,7 +72,7 @@ export const professionalJourney = [
         role: "Software Engineer Intern",
         company: "we+",
         period: "Mar 2025 - Jun 2025",
-        description: "Developed an AI-driven HR chatbot using Java and Angular, deployed on AWS.",
+        description: "Developed an AI-driven chatbot using Java and Angular, deployed on AWS.",
         logo: "/we-plus.png",
     },
     {
