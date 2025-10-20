@@ -1,4 +1,5 @@
-import { FaJava, FaReact, FaMicrosoft, FaPython } from "react-icons/fa";
+import { FaJava, FaPython, FaReact, FaMicrosoft } from "react-icons/fa";
+import { SiSpring } from "react-icons/si";
 
 export const projects = [
     {
@@ -40,15 +41,16 @@ export const projects = [
 
 export const skills = [
     {
-        category: "Backend / AI",
+        category: "Languages",
         skills: [
             { name: "Java", icon: FaJava },
             { name: "Python", icon: FaPython },
         ],
     },
     {
-        category: "Frontend",
+        category: "Frameworks",
         skills: [
+            { name: "Spring Boot", icon: SiSpring },
             { name: "React", icon: FaReact },
         ],
     },
