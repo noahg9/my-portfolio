@@ -81,7 +81,6 @@ export const professionalJourney = [
         degree: "Bachelor's Degree in Applied Computer Science",
         institution: "Karel de Grote Hogeschool",
         period: "2021 - 2025",
-        description: "Graduated Cum Laude with a specialization in Artificial Intelligence.",
         logo: "/kdg.jpg",
     },
 ];
