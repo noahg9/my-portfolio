@@ -87,6 +87,11 @@ const ProfessionalJourneyCard: React.FC<ProfessionalJourneyProps> = ({ items = p
                             >
                                 {item.period}
                             </Typography>
+                            {"description" in item && (
+                                <Typography variant="body2" sx={{ mt: 1 }}>
+                                    {item.description}
+                                </Typography>
+                            )}
                         </CardContent>
                     </Card>
                 ))}
